@@ -1,0 +1,1 @@
+{"userName":"user1","uid":1000,"gid":1000,"homeDirectory":"/home/user1","service":"io.systemd.DropIn","shell":"/bin/bash","timeZone":"Europe/Berlin","memberOf":["sudo","wheel"]}
