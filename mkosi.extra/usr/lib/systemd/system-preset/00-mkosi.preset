@@ -24,3 +24,12 @@ disable dnf-makecache.*
 disable auditd.service
 
 enable usr-lib-modules.mount
+
+# systemd-timesyncd is not enabled by default in the default systemd preset so enable it here instead.
+enable systemd-timesyncd.service
+
+# systemd-userdbd is not enabled by default so enable it here instead.
+enable systemd-userdbd.service
+
+# systemd-resolved might be disabled by default so make sure it is enabled.
+enable systemd-resolved.service
