@@ -1,0 +1,12 @@
+[submodule "fstests"]
+	path = fstests
+	url = git://git.kernel.org/pub/scm/fs/xfs/xfstests-dev.git
+[submodule "will-it-scale"]
+	path = will-it-scale
+	url = https://github.com/antonblanchard/will-it-scale.git
+[submodule "ltp"]
+	path = ltp
+	url = https://github.com/linux-test-project/ltp.git
+[submodule "blktests"]
+	path = blktests
+	url = https://github.com/osandov/blktests.git
