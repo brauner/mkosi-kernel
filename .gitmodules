@@ -10,3 +10,6 @@
 [submodule "blktests"]
 	path = blktests
 	url = https://github.com/osandov/blktests.git
+[submodule "fio"]
+	path = fio
+	url = https://github.com/axboe/fio.git
