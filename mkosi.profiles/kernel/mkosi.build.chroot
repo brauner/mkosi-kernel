@@ -127,10 +127,10 @@ if ((SELFTESTS)); then
         SELFTESTS_SKIP_TARGETS=""
     fi
 
-    make -C tools/testing/selftests -j "$(nproc)" $EXTRA KSFT_INSTALL_PATH="$DESTDIR/usr/lib/kernel/selftests" $SELFTESTS_TARGETS $SELFTESTS_SKIP_TARGETS
+    make -C tools/testing/selftests -j "$(nproc)" $EXTRA KSFT_INSTALL_PATH="$DESTDIR/usr/lib/kernel/selftests" "$SELFTESTS_TARGETS" "$SELFTESTS_SKIP_TARGETS"
     if ! ((INCREMENTAL)); then
         mkdir -p "$DESTDIR/usr/lib/kernel/selftests"
-        make -C tools/testing/selftests -j "$(nproc)" $EXTRA KSFT_INSTALL_PATH="$DESTDIR/usr/lib/kernel/selftests" $SELFTESTS_TARGETS $SELFTESTS_SKIP_TARGETS install
+        make -C tools/testing/selftests -j "$(nproc)" $EXTRA KSFT_INSTALL_PATH="$DESTDIR/usr/lib/kernel/selftests" "$SELFTESTS_TARGETS" "$SELFTESTS_SKIP_TARGETS" install
         mkdir -p "$DESTDIR/usr/bin"
         ln -sf /usr/lib/kernel/selftests/bpf/bpftool "$DESTDIR/usr/bin/bpftool"
     fi
