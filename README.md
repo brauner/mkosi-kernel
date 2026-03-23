@@ -69,7 +69,7 @@ BuildSources=<path-to-your-btrfs-progs-sources>:btrfs-progs
 ```
 
 The same applies to the other profiles (`fstests`, `ltp`, `blktests`,
-`bpfilter`).
+`bpfilter`, `bpftrace`, `fio`, `cxl`).
 
 To enable multiple profiles, you can do the following:
 
@@ -90,7 +90,7 @@ the relevant `BuildSources=` entry without disabling the profile itself.
 This configuration will download the required tools to build and boot the image
 on the fly. To use this configuration, the following tools have to be installed:
 
-- mkosi v25
+- mkosi v26
 - python 3.9 (Set `$MKOSI_INTERPRETER` to point to an alternative interpreter)
 - package manager of the distribution you're building
 - coreutils
