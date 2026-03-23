@@ -11,6 +11,7 @@ TEMP=$( \
     --long 'config' \
     --long 'btrfs-progs' \
     --long 'ltp' \
+    --long 'blktests' \
     --long 'bpfilter' \
     --long 'bpftrace' \
     --long 'fio' \
@@ -53,6 +54,11 @@ while true; do
             shift 1
             continue
         ;;
+        '--blktests')
+            BLKTESTS=1
+            shift 1
+            continue
+        ;;
         '--bpfilter')
             BPFILTER=1
             shift 1
@@ -85,6 +91,7 @@ KERNEL=$KERNEL
 CONFIG=$CONFIG
 LTP=$LTP
 BTRFS_PROGS=$BTRFS_PROGS
+BLKTESTS=$BLKTESTS
 BPFILTER=$BPFILTER
 BPFTRACE=$BPFTRACE
 FIO=$FIO
